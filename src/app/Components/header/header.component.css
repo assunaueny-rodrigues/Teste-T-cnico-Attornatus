@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.header {
+    background: rgb(100, 100, 100);
+    color: white;
+}
+
+.input {
+    margin-left: 20rem;
+    padding: 5px;
+    background: #8d8d8d;
+    border: none;
+    width: 20rem;
+}
+
+@media (max-width: 600px){
+    .input {
+        margin-left: 30px;
+        width: 10rem;
+    }
+}

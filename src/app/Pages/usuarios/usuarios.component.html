@@ -1,0 +1,48 @@
+<app-header title="Usuários"></app-header>
+<div class="container-main">
+  <div class="container-title">
+    <label>Usuários cadastrados</label>
+  </div>
+  <div class="container-table">
+      <table *ngIf="dataSource.length > 0" style="width: 100%;" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Avatar </th>
+            <td mat-cell *matCellDef="let element"> <mat-icon>person</mat-icon></td>
+          </ng-container>
+      
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> E-mail </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element"> 
+              <button (click)="openDialogUpdate(element)" mat-icon-button>
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button (click)="deleteUser(element)" mat-icon-button>
+                <mat-icon style="color: red;" >close</mat-icon>
+              </button> 
+            </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div *ngIf="dataSource.length === 0">
+        <label style="font-size: 10px; color: rgb(156, 156, 156);">Nenhum usuário cadastrado...</label>
+      </div>
+  </div>
+  <div class="container-button-add">
+    <button (click)="openDialog()" class="floating-button-add-user" mat-fab color="warn" >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>
+

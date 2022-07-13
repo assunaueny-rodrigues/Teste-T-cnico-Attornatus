@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserProps } from './models/models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafio-attornatus';
+  users: Array<UserProps> = []
+
 }

@@ -1,0 +1,32 @@
+.container-main {
+    width: 100%;
+    padding-top: 2rem;
+    height: 85vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container-title {
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.container-table {
+    width: 80%;
+    margin: auto;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container-button-add {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.floating-button-add-user{
+    margin-top: 20px;
+    margin-right: 20px;
+}
